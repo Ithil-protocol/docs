@@ -6,13 +6,47 @@ on:
   pull_request:
 
 jobs:
-  deploy:
+  bump_version:
+    name: Bump Version
     runs-on: ubuntu-latest
+    outputs:
+      new_tag: ${{ steps.github_tag_action.outputs.new_tag }}
+      changelog: ${{ steps.github_tag_action.outputs.changelog }}
     steps:
-      - uses: actions/checkout@master
-      - uses: redkubes/docusaurus-deploy-action@master
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Bump version and push tag
+        id: github_tag_action
+        uses: mathieudutour/github-tag-action@331898d5052eedac9b15fec867b5ba66ebf9b692
         with:
-          source-folder: website
-          git-user: bot
-          git-password: ${{ secrets.GITHUB_TOKEN }}
-          deployment-branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          release_branches: .*
+          default_bump: false
+
+  create_release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: bump_version
+#    if: ${{ needs.bump_version.outputs.new_tag != null }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build the ReactJS bundle
+        run: yarn build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
