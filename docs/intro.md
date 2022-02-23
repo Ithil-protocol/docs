@@ -16,6 +16,26 @@ Ithil supports almost any ERC20 tokens and offers a stable yield for liquidity p
 
 ## Leveraged investments
 
+With Ithil, anyone can profit from a wide variety of DeFi market scenarios by performing leveraged investments; the seamless workflow allows the investor to enter into any investment strategy with few clicks, letting Ithil's code to deal with all the complex passages necessary to implement the particular strategy.
+A high leverage is made possible by an internal system of uncollateralized loans, in which the funds are "borrowed" from Ithil's liquidity vault to be invested, and the result of the particular investment is *locked* in the strategy contract.
+In order for a user to be able to perform a leveraged investment through a strategy, there must be some *margin* posted into the strategy. This is necessary to cover for potential losses the vault could incur in the case of an unfavorable market movement.
+
+INSERIRE QUI IMMAGINE OPEN POSITION
+
+The opening of a position is done in three steps:
+- The user posts some margin into the strategy and sets the desired investment parameters
+- The strategy borrows funds from the vault, if the desired investment is higher than the margin posted
+- The strategy performs all the internal and external calls to get *assets* which are then locked into the strategy itself.
+
+Since the amount invested might be higher than the user's initial capital, the investment can be *leveraged*: in this way, the assets obtained will have a much higher value than if the user directly buys them directly from an external protocol.
+
+INSERIRE QUI IMMAGINE CLOSE POSITION
+
+The closure of a position is likewise done in three steps:
+- The assets are exchanged via internal or external DeFi protocol, to obtain the initial token used for the investment
+- The strategy repays the loan taken from the vault, plus interest rates and fees
+- The remaining part of the payoff is given back to the trader.
+
 ### Margin trading
 
 ### Leveraged staking
@@ -29,6 +49,14 @@ Ithil supports almost any ERC20 tokens and offers a stable yield for liquidity p
 ## Liquidations
 
 ## Governance token
+
+### Liquidity mining
+
+### Liquidations
+
+### Rewards
+
+
 
 ### Key takeaways
 * Internal undercollateralised leverage system
