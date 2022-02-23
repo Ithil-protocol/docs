@@ -2,17 +2,33 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Litepaper
 
 ---
 
-## Getting Started
+## Introduction
 
-Ithil is a **generalized leveraged investments protocol**, which offers the possibility to liquidity providers to stake any ERC20 token and earn fees in that same token, and to investors to use the available liquidity to perform investment with a higher capital than their initial one. This is possible thanks to internal **undercollateralized loans** where the *vault* lends its liquidity to the *strategies*, which will eventually repay the loan and deliver the gains to the investor. In order to use the vault's liquidity, the investor needs to pay a **margin** to the desired strategy: this will cover eventual losses, but is given back to the investor in full in the case of a profitable investment. When the value of an investment falls behind some critical threshold, external **liquidators** can close the position forcefully, getting rewards by doing so. Governance token holders can provide liquidity to boost the vault's APY and earn rewards in stablecoins, or can stake their tokens to perform a decentralized liquidation and get rewards in the vault's tokens, besides being able to vote in the DAO's decisions. A simple and solid backing system mathematically insures the dollar value of the governance token never to go below an always increasing floor, thus privileging holders committing to Ithil's community for a long time.
+Ithil is a **generalized leveraged investments protocol**, which offers the possibility to liquidity providers to stake any ERC20 token and earn fees in that same token, and to investors to use the available liquidity to perform investment with a higher capital than their initial one. This is possible thanks to internal **undercollateralized loans** where the *vault* lends its liquidity to the *strategies*, which will eventually repay the loan and deliver the gains to the investor. In order to use the vault's liquidity, the investor needs to pay a **margin** to the desired strategy: this will cover eventual losses, but is given back to the investor in full in the case of a profitable investment. When the value of an investment falls behind some critical threshold, external **liquidators** can close the position forcefully, getting rewards by doing so. **Governance token** holders can provide liquidity to boost the vault's APY and earn rewards in stablecoins, or can stake their tokens to perform a decentralized liquidation and get rewards in the vault's tokens, besides being able to vote in the DAO's decisions. A simple and solid backing system mathematically insures the dollar value of the governance token never to go below an always increasing floor, thus privileging holders committing to Ithil's community for a long time.
 
-Ithil protocol is a **permissionless trading aggregator** created to help users optimise their income via a multitude of vetted strategies running cross-chain.
+<!-- Ithil protocol is a **permissionless trading aggregator** created to help users optimise their income via a multitude of vetted strategies running cross-chain.
 Users can choose a specific strategy depending on the possible profit vs risks, tweak a few parameters and easily place it via the frontend without worrying about which chain they will be executed. Open positions can be closed at any time and can benefit from an undercollateralised leverage up to 10X for the bravest.
-Ithil supports almost any ERC20 tokens and offers a stable yield for liquidity providers willing to lend their assets to traders. The protocol takes a fixed and a percentual fee on borrowed assets and redistributes it to governance token holders and a small percentage to the developers behind it. We make strategies simple and intuitive for any investor to take part in: via a set of smart contracts and several investment strategies, Ithil help users maximise their rewards from various liquidity pools (LPs), automated market makers (AMM), yield aggregators, staking pools and other income bearing opportunities in the DeFi ecosystem. This way we provide a huge advantage over attempting to do this manually yourself and risking losing all your assets.
+Ithil supports almost any ERC20 tokens and offers a stable yield for liquidity providers willing to lend their assets to traders. The protocol takes a fixed and a percentual fee on borrowed assets and redistributes it to governance token holders and a small percentage to the developers behind it. We make strategies simple and intuitive for any investor to take part in: via a set of smart contracts and several investment strategies, Ithil help users maximise their rewards from various liquidity pools (LPs), automated market makers (AMM), yield aggregators, staking pools and other income bearing opportunities in the DeFi ecosystem. This way we provide a huge advantage over attempting to do this manually yourself and risking losing all your assets. -->
+
+## Leveraged investments
+
+### Margin trading
+
+### Leveraged staking
+
+## Undercollateralized loans
+
+### Ithil's vault
+
+### LP tokens and liquidity mining
+
+## Liquidations
+
+## Governance token
 
 ### Key takeaways
 * Internal undercollateralised leverage system
