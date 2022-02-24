@@ -29,7 +29,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Ithil Docs`}
+      title={`Ithil`}
       description="Guides and tutorials for Ithil protocol">
       <HomepageHeader />
       <main>
