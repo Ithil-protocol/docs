@@ -27,16 +27,47 @@ The opening of a position is done in three steps:
 - The strategy borrows funds from the vault, if the desired investment is higher than the margin posted
 - The strategy performs all the internal and external calls to get *assets* which are then locked into the strategy itself.
 
-Since the amount invested might be higher than the user's initial capital, the investment can be *leveraged*: in this way, the assets obtained will have a much higher value than if the user directly buys them directly from an external protocol.
+Since the amount invested might be higher than the user's initial capital, the investment can be *leveraged*: in this way, the assets obtained will have a much higher value than if the user directly buys them from an external protocol.
 
 INSERIRE QUI IMMAGINE CLOSE POSITION
 
 The closure of a position is likewise done in three steps:
-- The assets are exchanged via internal or external DeFi protocol, to obtain the initial token used for the investment
+- The assets are exchanged internally or through an external DeFi protocol, to obtain the initial token used for the investment
 - The strategy repays the loan taken from the vault, plus interest rates and fees
 - The remaining part of the payoff is given back to the trader.
 
+The strategies which can be implemented are in principle very general: Ithil's community can implement a new strategy at any time, and the governance can approve it to use the vault's funds.
+
+INSERIRE QUI IMMAGINE STRATEGY APPROVAL
+
+In order to prevent the governance to make faulty logics which would put the vault's liquidity at risk, all strategies must inherit from a common **base strategy**, which is an *abstract* contract which implements the borrow and repay logic agnostically from the particular investment logic. This has the double advantage of giving a "golden standard" to assure the vault's liquidity is protected, and making the development of new strategies much simpler.
+
+INSERIRE QUI IMMAGINE BASE STRATEGY
+
+Besides calling the relevant external contracts to perform the particular investment, the specific strategies must also implement a **quoter**, a view function which gives at every time the value of the obtained assets with respect to the initial token used to obtain them. This is important for liquidations and cross-margin investments (INSERIRE HYPERLINK).
+
+We give here two examples of simple strategies, reminding that the actual strategies which can be implemented are potentially infinite and can vary in complexity and risk.
+
 ### Margin trading
+
+Margin trading is the simplest form of a strategy, in which the investment logic is exchanging one token for another one on an external exchange platform.
+
+INSERIRE QUI IMMAGINE MTS
+
+The strategy's quoter will keep track of the exchange rate of Token A with respect to Token B. When the position is closed, Token B is exchanged to obtain back Token A: the quantity of Token A obtained will determine if the investment has been profitable or not.
+Let us make a numerical example of a **long position**:
+- A user posts a margin of 100 TKA to the Margin Trading Strategy (MTS) contract, and decides to go *long* with a x10 leverage on TKB.
+- Assuming an exchange rate of 50 TKA/TKB, the MTS will then borrow 900 TKA from the vault, and exchange 1000 TKA to obtain 20 TKB from an external protocol. This tokens are locked in the MTS and an onchain position is opened for the user.
+- If the user closes the position when the exchange rate has increased by 20% to 60 TKA/TKB, then exchanging 20 TKB back will provide 1200 TKA to the MTS. The MTS will repay the 900 TKA to the vault (ignoring fees and interest rate INSERIRE HYPERLINK) and deliver the remaining 300 TKA to the user. With a market movement of only 20%, the user has realised a whopping 200% gain thanks to the 10x leverage.
+
+In the case of a **short position** the situation is similar:
+- A user posts a margin of 100 TKA to the MTS contract, and decides to go *short* with a x10 leverage on TKB.
+- Assuming an exchange rate of 50 TKA/TKB, the MTS will then borrow 20 TKB from the vault, and exchange them on an external protocol to obtain 1000 TKA. This tokens are locked in the MTS and an onchain position is opened for the user. At this point, 1100 TKA are locked in the MTS.
+- If the user closes the position when the exchange rate has decreased by 20% to 40 TKA/TKB, then only 800 TKA are necessary to obtain the 20 TKB back to repay the vault (again ignoring fees and interest rate INSERIRE HYPERLINK): the remaining 300 TKA are delivered to the user. Again, a market movement of only 20% has made the trader earn 200% thanks to the 10x leverage.
+
+In both cases, the user can post the margin either in TKA or TKB, and the MTS will adjust the amount of the loan to take from the vault accordingly.
+
+Since the liquidity transferred from the vault and locked, in the form of assets, in the MTS belongs to the LPs, every time a loan is taken the vault computes the **interest rate** at which the liquidity can be borrowed for that particular investment. The calculation of the interest rate takes into account the riskiness of the investment, the amount of liquidity taken, and the amount of margin posted by the user.
 
 ### Leveraged staking
 
@@ -56,7 +87,7 @@ The closure of a position is likewise done in three steps:
 
 ### Rewards
 
-
+## Ithil's DAO
 
 ### Key takeaways
 * Internal undercollateralised leverage system
