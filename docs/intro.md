@@ -46,6 +46,8 @@ INSERIRE QUI IMMAGINE BASE STRATEGY
 
 Besides calling the relevant external contracts to perform the particular investment, the specific strategies must also implement a **quoter**, a view function which gives at every time the value of the obtained assets with respect to the initial token used to obtain them. This is important for liquidations and cross-margin investments (INSERIRE HYPERLINK).
 
+Since the liquidity transferred from the vault and locked in the form of assets in the strategies belongs to the LPs, every time a loan is taken the vault computes the **interest rate** at which the liquidity can be borrowed for that particular investment. The calculation INSERIRE HYPERLINK of the interest rate takes into account the riskiness of the investment, the amount of liquidity taken, and the amount of margin posted by the user.
+
 We give here two examples of simple strategies, reminding that the actual strategies which can be implemented are potentially infinite and can vary in complexity and risk.
 
 ### Margin trading
@@ -57,19 +59,34 @@ INSERIRE QUI IMMAGINE MTS
 The strategy's quoter will keep track of the exchange rate of Token A with respect to Token B. When the position is closed, Token B is exchanged to obtain back Token A: the quantity of Token A obtained will determine if the investment has been profitable or not.
 Let us make a numerical example of a **long position**:
 - A user posts a margin of 100 TKA to the Margin Trading Strategy (MTS) contract, and decides to go *long* with a x10 leverage on TKB.
-- Assuming an exchange rate of 50 TKA/TKB, the MTS will then borrow 900 TKA from the vault, and exchange 1000 TKA to obtain 20 TKB from an external protocol. This tokens are locked in the MTS and an onchain position is opened for the user.
-- If the user closes the position when the exchange rate has increased by 20% to 60 TKA/TKB, then exchanging 20 TKB back will provide 1200 TKA to the MTS. The MTS will repay the 900 TKA to the vault (ignoring fees and interest rate INSERIRE HYPERLINK) and deliver the remaining 300 TKA to the user. With a market movement of only 20%, the user has realised a whopping 200% gain thanks to the 10x leverage.
+- Assuming an exchange rate of 50 TKA/TKB, the MTS will then borrow 900 TKA from the vault, say at a daily interest rate of 0.1%, and exchange 1000 TKA to obtain 20 TKB from an external protocol. This tokens are locked in the MTS and an onchain position is opened for the user.
+- If the user closes the position after 10 days, when the exchange rate has increased by 20% to 60 TKA/TKB, then exchanging 20 TKB back will provide 1200 TKA to the MTS. 
+- The MTS will repay the 909 TKA to the vault (900 borrowed plus 1% interest) and deliver the remaining 291 TKA to the user. With a market movement of only 20%, the user has realised a whopping 191% gain thanks to the 10x leverage.
 
 In the case of a **short position** the situation is similar:
 - A user posts a margin of 100 TKA to the MTS contract, and decides to go *short* with a x10 leverage on TKB.
-- Assuming an exchange rate of 50 TKA/TKB, the MTS will then borrow 20 TKB from the vault, and exchange them on an external protocol to obtain 1000 TKA. This tokens are locked in the MTS and an onchain position is opened for the user. At this point, 1100 TKA are locked in the MTS.
-- If the user closes the position when the exchange rate has decreased by 20% to 40 TKA/TKB, then only 800 TKA are necessary to obtain the 20 TKB back to repay the vault (again ignoring fees and interest rate INSERIRE HYPERLINK): the remaining 300 TKA are delivered to the user. Again, a market movement of only 20% has made the trader earn 200% thanks to the 10x leverage.
+- Assuming an exchange rate of 50 TKA/TKB, the MTS will then borrow 20 TKB from the vault, say at a daily interest rate of 0.1%, and exchange them on an external protocol to obtain 1000 TKA. This tokens are locked in the MTS and an onchain position is opened for the user. At this point, 1100 TKA are locked in the MTS.
+- If the user closes the position after 10 days, when the exchange rate has decreased by 20% to 40 TKA/TKB, then only 808 TKA are necessary to obtain the 20.2 TKB back to repay the vault (20 borrowed plus 1% interest). 
+- The remaining 292 TKA are delivered to the user. A market movement of only 20% has made the trader earn 192% thanks to the 10x leverage.
 
 In both cases, the user can post the margin either in TKA or TKB, and the MTS will adjust the amount of the loan to take from the vault accordingly.
-
-Since the liquidity transferred from the vault and locked, in the form of assets, in the MTS belongs to the LPs, every time a loan is taken the vault computes the **interest rate** at which the liquidity can be borrowed for that particular investment. The calculation of the interest rate takes into account the riskiness of the investment, the amount of liquidity taken, and the amount of margin posted by the user.
+Of course, if the market moves unfavorably, the losses are equally aplified with respect of a non-leveraged trade. If the exchange falls below some critical level, the position will be liquidated INSERIRE HYPERLINK
 
 ### Leveraged staking
+
+Through the Leveraged Staking Strategy (LSS), the vault's liquidity can be borrowed and staked on an external protocol to get a leveraged yield. If the yield obtained from the staking protocol is higher than the interest rate necessary to borrow the funds, the difference represents the gain of the user.
+
+INSERIRE QUI IMMAGINE STAKING PROTOCOL
+
+Let us make a numerical example.
+- A user posts a margin of 100 TKA to the LSS contract, and decides to stake TKA on an external staking protocol SP with a 10x leverage.
+- The LSS contract will borrow 900 TKA from the vault and stake the 1000 TKA on SP, obtaining say 1000 lTKA, the wrapped tokens representing the stake.
+- Assume that, after one month, the rolling APR of SP hah been 60%, thus giving a monthly gain of 5%. Assume also that the monthly interest rate applied by Ithil's vault has been 3%. 
+- If the user closes its position, the 1000 lTKA will be redeemed on SP to obtain 1050 TKA, while the vault has to be repaied of 927 TKA (900 TKA borrowed, plus 3%). The remaining 123 TKA are given back to the user, which will see a 23% gain in one month using a staking protocol which has only given 5% of yield. This is possible thanks to the x10 leverage.
+
+
+In both cases, the user can post the margin either in TKA or lTKA, and the MTS will adjust the amount of the loan to take from the vault accordingly.
+Of course, if the price per share increases less than the applied interest rate, the user may lose money. If the interest accrued go above some critical level, the position will be liquidated INSERIRE HYPERLINK
 
 ## Undercollateralized loans
 
