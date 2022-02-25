@@ -7,7 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Documentation',
-  tagline: 'Dinosaurs are cool',
+  titleDelimiter: '·',
+  tagline: 'Learn more about Ithil',
   url: 'https://ithil.fi',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -23,15 +24,20 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl: 'https://github.com/ithil-protocol/docs',
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-MBCVETP548',
+        },
       }),
     ],
   ],
+
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -48,6 +54,11 @@ const config = {
             docId: 'intro',
             position: 'left',
             label: 'Guide',
+          },
+          {
+            to: '/tutorial',
+            label: 'Tutorial',
+            position: 'left',
           },
           {
             href: 'https://github.com/ithil-protocol/docs',
@@ -95,6 +106,19 @@ const config = {
               {
                 label: 'App',
                 href: 'https://app.ithil.fi',
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Disclamer',
+                href: 'https://ithil.fi/disclamer/',
+              },
+              {
+                label: 'Terms of Service',
+                href: 'https://ithil.fi/tos',
               },
             ],
           },
