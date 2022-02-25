@@ -163,7 +163,16 @@ When Ithil tokens are staked in the liquidation contract, the staker can perform
 
 ### Rewards
 
-ITH is backed in a specific backing contract similar to Ithil's vault. The price per share system then follows the same logic as in Ithil's vault: the excess amount from the insurance reserve, as well as ad-hoc investments driven by the governance can inject stablecoins or ITH in the backing contract, thus assuring a backing price which is always increasing. This is shown in the same was as in the price per share in Ithil's vault, with the exception that no event can occur which decreases the price (there are no "bad liquidations").
+ITH is backed in a specific backing contract similar to Ithil's vault. The price per share calculated by the contract is so that every circulating (i.e. outside the backing contract) ITH can be redeemed at any moment at that price, thus assuring the rewards accumulated by ITH holders are distributed. Moreover, redeeming ITH on the backing contract does not change the price, as it can be seen by a direct calculation.
+
+INSERIRE QUI IMMAGINE BACKING CONTRACT
+
+The stablecoins inside the backing contract can come from various sources, such as
+- Excess insurance reserve above the optimal ratio.
+- Direct ITH exchange on the backing contract.
+- Profits from separate treasury's investments.
+
+The key takeaway is the fact that *there is no way to extract stablecoins from the backing contract, except redeeming ITH*. In this way, the backing price of ITH can never decrease, while there are various ways in which it can increase. A ITH holder will then see the backing price of ITH always go up in time, a system which strongly encourages to commit to the community for a long time.
 
 ## Ithil's DAO
 
