@@ -44,11 +44,9 @@ In order to prevent the governance to take faulty decisions which would put the 
 
 ![Base strategy](/img/core/strategies.png)
 
-INSERIRE QUI IMMAGINE BASE STRATEGY
-
 Besides calling the relevant external contracts to perform the particular investment, the specific strategies must also implement a **quoter**, a view function which gives at every time the value of the obtained assets with respect to the initial token used to obtain them. This is important for liquidations and for margins given in the asset token.
 
-Since the liquidity transferred from the vault and locked in the form of assets in the strategies belongs to the LPs, every time a loan is taken the vault computes the **interest rate** at which the liquidity can be borrowed for that particular investment. The calculation INSERIRE HYPERLINK of the interest rate takes into account the riskiness of the investment, the amount of liquidity taken and the amount of margin posted by the user.
+Since the liquidity transferred from the vault and locked in the form of assets in the strategies belongs to the LPs, every time a loan is taken the vault computes the **interest rate** at which the liquidity can be borrowed for that particular investment. The calculation of the interest rate takes into account the riskiness of the investment, the amount of liquidity taken and the amount of margin posted by the user.
 
 We give here two examples of simple strategies, while ideally **the strategies that can be implemented are potentially infinite and can vary in complexity and risk, covering pure DeFi to more structured TradFi-like ones**.
 
@@ -72,7 +70,7 @@ In the case of a **short position** the situation is similar:
 - The remaining 292 TKA are delivered to the user. A market movement of only 20% has made the trader earn 192% thanks to the 10x leverage.
 
 In both cases, the user can post the margin either in TKA or TKB and the MTS will adjust the amount of the loan to take from the vault accordingly.
-Of course, if the market moves unfavorably, the losses are equally aplified with respect of a non-leveraged trade. If the exchange falls below some critical level, the position will be liquidated INSERIRE HYPERLINK
+Of course, if the market moves unfavorably, the losses are equally aplified with respect of a non-leveraged trade. If the exchange falls below some critical level, the position will be liquidated.
 
 ### Leveraged staking
 
@@ -88,7 +86,7 @@ Let us make a numerical example.
 
 
 In both cases, the user can post the margin either in TKA or lTKA and the MTS will adjust the amount of the loan to take from the vault accordingly.
-Of course, if the price per share increases less than the applied interest rate, the user may lose money. If the interest accrued go above some critical level, the position will be liquidated INSERIRE HYPERLINK
+Of course, if the price per share increases less than the applied interest rate, the user may lose money. If the interest accrued go above some critical level, the position will be liquidated.
 
 ## Undercollateralized loans
 
@@ -108,8 +106,6 @@ When a loan is taken from a strategy, the vaults computes the interest rate at w
 - The **uninsured portion** of the vault, which is the percentage of the vault's balance which is not insurance reserve.
 - The **collateralization** of the position, which is the ratio between the borrowed amount and the margin (denominated in borrowed tokens).
 The final interest rate is then directly proportional to these four numbers, i.e. it's the multiplication of all of them renormalized by a global factor. The interest rate is computed considering the vault state at the opening of a position, while the due fees are calculated at the closure of the same position.
-
-INSERIRE QUI IMMAGINE CALCOLO INTEREST RATE
 
 Finally, a small fixed fee is set by the governance and it is charged as a percentage of the borrowed amount, regardless of the duration of the position. This reduces the economic rationale of potential attacks in which positions are open and closed immediately.
 
