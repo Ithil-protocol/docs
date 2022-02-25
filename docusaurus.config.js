@@ -79,7 +79,7 @@ const config = {
               },
               {
                 label: 'Tutorial',
-                to: '/docs/tutorial',
+                to: '/tutorial',
               },
             ],
           },
@@ -114,7 +114,7 @@ const config = {
             items: [
               {
                 label: 'Disclamer',
-                href: 'https://ithil.fi/disclamer/',
+                href: 'https://ithil.fi/disclamer',
               },
               {
                 label: 'Terms of Service',
