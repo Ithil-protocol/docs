@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Quickly get started',
-    image: require('../../static/img/home-quick.png').default,
+    image: require('../../static/img/home/quick.png').default,
     description: (
       <>
         Follow the 5 mins tutorial and start using the protocol now.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Focus on what matters',
-    image: require('../../static/img/home-direct.png').default,
+    image: require('../../static/img/home/direct.png').default,
     description: (
       <>
         Learn about the core functions and how to take the most out of it.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Deep dive into details',
-    image: require('../../static/img/home-thorough.png').default,
+    image: require('../../static/img/home/thorough.png').default,
     description: (
       <>
         Go beyond the surface and see how things work under the hood.
