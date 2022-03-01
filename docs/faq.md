@@ -9,11 +9,11 @@ What you wanted to know, but never had the opportunity to ask
 
 ## Leverage
 This is the ratio between the amount invested, and the margin you deposited. 
-For example, if you deposited 100 *DAI* worth of margin, and your position has a 5x leverage, $$100 x 5 = 500$$ *DAI* are invested on your behalf.
+For example, if you deposited 100 *DAI* worth of margin, and your position has a 5x leverage, 100 x 5 = 500 *DAI* are invested on your behalf.
 
 ## Principal
 This is the part of Ithil's liquidity used to open your investment. 
-For example, if the value of your investment at inception was 500 *DAI*, and you deposited 100 *DAI* worth of margin, then the principal is $$500 - 100 = 400$$ *DAI*.
+For example, if the value of your investment at inception was 500 *DAI*, and you deposited 100 *DAI* worth of margin, then the principal is 500 - 100 = 400 *DAI*.
 
 ## TVL
 It is the total value locked in the vault, including the currently given loans and excluding the insurance reserve.
