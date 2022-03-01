@@ -1,13 +1,17 @@
+---
+sidebar_position: 1
+---
+
+# Margin Trading
 Enabling traders to go long or short on any token pair
 
 ---
 
+Margin trading is the simplest form of a strategy, in which the investment logic is exchanging one token for another one on an external exchange platform.
+
+## How it works
 Margin trading is a way of trading assets using funds provided by a third party lender. Compared to regular trading where traders use their own assets, margin accounts allow to access greater sums of capital, so that they can leverage their positions increasing market exposure. Essentially, margin trading amplifies trading results so that traders can get bigger profits on successful trades.
 It is the first and foremost strategy of Ithil and the best way to get into investing in a simple way.
-
-### Margin trading
-
-Margin trading is the simplest form of a strategy, in which the investment logic is exchanging one token for another one on an external exchange platform.
 
 ![Margin trading strategy](/img/strategies/margin-trading.png)
 

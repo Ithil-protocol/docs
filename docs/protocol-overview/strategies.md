@@ -1,8 +1,11 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
-## Abstract strategies
+# Strategies
+Ready-made investment solutions using DeFi legos
+
+---
 
 The strategies which can be implemented are in principle very general: Ithil's community can implement a new strategy at any time and the governance can approve it to use the vault's funds.
 

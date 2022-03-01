@@ -1,8 +1,11 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 ---
 
-## Liquidations
+# Liquidations
+If you know them, you avoid them
+
+---
 
 Liquidations are a fundamental part in the echosystem: closing positions getting too close to having their margin completely eroded (more precisely, beyond a strategy-specific percentage called the **risk factor**), they protect the vault's liquidity and prevent the share price of LP tokens to decrease. In this way, liquidity providers are guaranteed to receive a positive APY with a very low risk.
 

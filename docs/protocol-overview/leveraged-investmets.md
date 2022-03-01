@@ -1,8 +1,11 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-## Leveraged investments
+# Leveraged investments
+Multiplying the capital at your disposal
+
+---
 
 With Ithil, anyone can profit from a wide variety of DeFi market scenarios by performing leveraged investments; the seamless workflow allows the trader to enter into any investment strategy with few clicks, letting Ithil deal with all the complex procedures necessary to implement a particular strategy.
 A *true* leverage is made possible by an internal system of uncollateralised loans, in which the funds are borrowed from Ithil's liquidity vault to be invested and the result of the particular investment is *locked* in the strategy contract.
