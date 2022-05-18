@@ -71,19 +71,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Guide',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Tutorial',
-                to: '/tutorial',
-              },
-            ],
-          },
-          {
             title: 'Community',
             items: [
               {
@@ -104,21 +91,8 @@ const config = {
                 href: 'https://ithil.fi',
               },
               {
-                label: 'App',
-                href: 'https://app.ithil.fi',
-              },
-            ],
-          },
-          {
-            title: 'Legal',
-            items: [
-              {
-                label: 'Disclamer',
-                href: 'https://ithil.fi/disclamer',
-              },
-              {
-                label: 'Terms of Service',
-                href: 'https://ithil.fi/tos',
+                label: 'Blog',
+                href: 'https://medium.com/@ithil-protocol',
               },
             ],
           },
