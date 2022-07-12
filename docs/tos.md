@@ -1,12 +1,12 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # Terms of Service
 
 ---
 
-Our Terms of Service (from now after referred as "Terms") govern your access to and use of the Ithil website available at https://ithil.fi/ (the "Website") and Ithil Application (app) accessible at https://app.ithil.fi/ (with temporary beta accessible at https://app.ithil.fi/) (the "Ithil App", and collectively with the Website, the "Platform"). The Platform is provided by Ithil Ltd, a company incorporated under the laws of the British Virgin Islands with its registered office address at Intershore Chambers, PO Box 4342, Road Town, Tortola, VG1110 British Virgin Islands ("we", "us", "our" or "Ithil") to be primarily used as a web-based interface to access and use the Protocol (as defined below) in a user-friendly and easily comprehensible manner.
+Our Terms of Service (from now after referred as "Terms") govern your access to and use of the Ithil website available at https://ithil.fi/ (the "Website") and Ithil Application (app) accessible at https://app.ithil.fi/ (the "Ithil App", and collectively with the Website, the "Platform"). The Platform is provided by Ithil Ltd, a company incorporated under the laws of the British Virgin Islands with its registered office address at Intershore Chambers, PO Box 4342, Road Town, Tortola, VG1110 British Virgin Islands ("we", "us", "our" or "Ithil") to be primarily used as a web-based interface to access and use the Protocol (as defined below) in a user-friendly and easily comprehensible manner.
 
 By accessing or using the Platform, connecting your Digital Wallet (as defined below) to the Ithil App, or by clicking the button "I accept" or respective check box in connection with or relating to these Terms, you ("you", "your") acknowledge that you have read, accept without modifications and agree to be bound by these Terms and all terms incorporated herein by reference, which form a legally binding agreement between you and Ithil. If you do not accept or agree to these Terms, you are not allowed to access or use the Platform, and must immediately discontinue any use thereof.
 
@@ -53,7 +53,7 @@ In these Terms, unless the context requires otherwise, the terms shall have the 
 
 "Third-Party Costs" means any costs, fees, or expenses that are charged by third parties, including, for example, the Ethereum blockchain network or other blockchains gas costs, fees related to Third-Party Services, etc.
 
-"Third-Party Services" means any software, services, items, and solutions that are not provided by Ithil, such as, for example, software wallets, analytic tools, blockchain smart-contracts (including automated market-making (AMM) protocols and decentralized exchange smart-contract systems), as well as third-party mining and yield farming pools and initiatives.
+"Third-Party Services" means any software, services, items, and solutions that are not provided by Ithil, such as, for example, software wallets, analytic tools, blockchain smart-contracts (including automated market-making (AMM) protocols and decentralised exchange smart-contract systems), as well as third-party mining and yield farming pools and initiatives.
 
 "User-Generated Content" means any information, materials, or content posted, created, or furnished by the users of the Platform or any person other than Ithil, including through the Platform.
 

@@ -25,7 +25,7 @@ All Ithil's decisions and community building cannot take place without a solid t
 - Investing in airdrops and external activities.
 Each time, the DAO will propose and let all ITHIL holders decide about Ithil's resolution.
 
-## The ITHILIL token
+## The $ITHIL token
 
 Governance tokens ITHIL are vital for Ithil's growth and sustainability. Ithil's governance token holders participate in governance decisions, perform liquidations and earn from them and get rewards in the form of an ever-increasing backing system coming from all these activities.
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # FAQ
@@ -8,7 +8,7 @@ What you wanted to know, but never had the opportunity to ask
 ---
 
 ## DeFi
-DeFi protocols are being built to perform the key functions of a financial system, just in a better way. They are pieces of software (i.e. smart contracts) running on public, permissionless blockchain systems that do not rely on trusted intermediaries (e.g. banks, brokers, clearing houses) to facilitate financial transactions and reduce financial risk between counterparties. These smart contracts operate autonomously as programmed and their performance is verified by the decentralized network of nodes supporting the blockchain. Smart contracts encode the terms, conditions and logic of the financial product or service, or plainly the rules that participants of a financial transaction agree to. The autonomous nature of smart contracts renders intermediaries as we know them redundant because an inherent state of "trustlessness" is created. The only thing standing between multiple counterparties of financial transactions is public software executed in a deterministic, trustless and censorship-resistant manner. The individual is granted verifiability, control and sovereignty.
+DeFi protocols are being built to perform the key functions of a financial system, just in a better way. They are pieces of software (i.e. smart contracts) running on public, permissionless blockchain systems that do not rely on trusted intermediaries (e.g. banks, brokers, clearing houses) to facilitate financial transactions and reduce financial risk between counterparties. These smart contracts operate autonomously as programmed and their performance is verified by the decentralised network of nodes supporting the blockchain. Smart contracts encode the terms, conditions and logic of the financial product or service, or plainly the rules that participants of a financial transaction agree to. The autonomous nature of smart contracts renders intermediaries as we know them redundant because an inherent state of "trustlessness" is created. The only thing standing between multiple counterparties of financial transactions is public software executed in a deterministic, trustless and censorship-resistant manner. The individual is granted verifiability, control and sovereignty.
 
 ## Leverage
 This is the ratio between the amount invested, and the margin you deposited. 
