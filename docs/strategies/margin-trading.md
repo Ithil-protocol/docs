@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Margin Trading
+# Margin trading
 Enabling traders to go long or short on any token pair
 
 ---
