@@ -46,7 +46,7 @@ All token transfer logic from the user, borrow and repayment from the Vault is b
 
 This is a minimal working strategy that does nothing and returns tokens to the user when they close the position.
 
-```solidity
+```javascript
 // SPDX-License-Identifier: BUSL-1.1
 pragma solidity >=0.8.12;
 
@@ -61,8 +61,15 @@ contract ExampleStrategy is BaseStrategy {
         address _liquidator
     ) BaseStrategy(_vault, _liquidator, "ExampleStrategy", "ITHIL-ES-POS") {}
 
+    /// @notice open a position
+    /// @param order the structure with the order parameters
+    /// @return amountIn the amount of tokens obtained from an external protocol
     function _openPosition(Order calldata order) internal override returns (uint256 amountIn) {}
 
+    /// @notice close the position
+    /// @param positionId the id of the position to be closed
+    /// @param expectedCost the acceptable slippage
+    /// @return (amountIn, amountOut) the amount obtained and spent when closing the position
     function _closePosition(Position memory position, uint256 expectedCost)
         internal
         override
@@ -71,6 +78,12 @@ contract ExampleStrategy is BaseStrategy {
         IERC20(position.owedToken).safeTransfer(address(vault), amountIn);
     }
 
+    /// @notice gives the amount of destination tokens the external protocol
+    ///         would produce by spending an amount of source token
+    /// @param src the token to give to the external strategy
+    /// @param dst the token expected from the external strategy
+    /// @param amount the amount of src tokens to be given
+    /// @return (min, max) the min and max amounts
     function quote(
         address src,
         address dst,

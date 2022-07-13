@@ -48,3 +48,8 @@ Of course, if the market moves unfavorably, the losses are equally aplified with
 ## Risk Factor
 The risk factor of r for a given token pair, means that for a position with that token pair to be liquidable, must incur a loss of at least $=(100-r)\%$.
 Such number is dependant on the specific token: a more volatile token will have a higher risk factor. Then the actual risk factor of the pair, which is applied for liquidation, will be some sort of average (arithmetic, geometric, p-means...) of the two risk factors. The logic behind is that, the higher the token volatility, the more likely the value of the entitlement will fall below the threshold defined by the risk factor, and we do not want that a more likely event will trigger a liquidation (otherwise, too many positions will be liquidable, which we want to avoid).
+
+## Implementations
+Currently the following protocols support a leveraged staking strategy:
+* Kyber (*on-chain dex aggregator*) - [kyber.network](https://kyber.network/)
+* Uniswap (*the most famous dex on Ethereum*) - [uniswap.org](https://uniswap.org/)

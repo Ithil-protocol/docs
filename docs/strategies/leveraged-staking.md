@@ -12,12 +12,11 @@ Through the Leveraged Staking Strategy (LSS), the vault's liquidity can be borro
 ```mermaid
 sequenceDiagram
     User->>+Strategy: Open position
-    Vault->>+Strategy: Lend
     Strategy->>+Protocol: Stakes
     Protocol-->>-Strategy: Obtain yield-bearing tokens
     User->>+Strategy: Close position
     Strategy->>+Protocol: Unstakes
-    Protocol-->>-Vault: Send underlying tokens
+    Protocol-->>-Strategy: Send underlying tokens
     Strategy->>+User: Take eventual profit
 ```
 
