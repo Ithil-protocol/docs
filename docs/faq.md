@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 # FAQ
@@ -12,11 +12,11 @@ DeFi protocols are being built to perform the key functions of a financial syste
 
 ## Leverage
 This is the ratio between the amount invested, and the margin you deposited. 
-For example, if you deposited 100 *DAI* worth of margin, and your position has a 5x leverage, 100 x 5 = 500 *DAI* are invested on your behalf.
+For example, if you deposited 100 `DAI` worth of margin, and your position has a 5x leverage, 100 x 5 = 500 `DAI` are invested on your behalf.
 
 ## Principal
 This is the part of Ithil's liquidity used to open your investment. 
-For example, if the value of your investment at inception was 500 *DAI*, and you deposited 100 *DAI* worth of margin, then the principal is 500 - 100 = 400 *DAI*.
+For example, if the value of your investment at inception was 500 `DAI`, and you deposited 100 `DAI` worth of margin, then the principal is 500 - 100 = 400 `DAI`.
 
 ## TVL
 It is the total value locked in the vault, including the currently given loans and excluding the insurance reserve.
@@ -25,10 +25,10 @@ It is the total value locked in the vault, including the currently given loans a
 The margin you have deposited to open the current position. This serves as a guarantee for the loan taken to open the position, and will be transferred back to you if the position is closed with a gain.
 
 ## APY
-This is the yearly rate you would obtain by staking on this vault, if the current state persists. For example, by staking 1000 *DAI* on a vault with 20% APY, you would be able to withdraw 1200 *DAI* one year from now.
+This is the yearly rate you would obtain by staking on this vault, if the current state persists. For example, by staking 1000 `DAI` on a vault with 20% APY, you would be able to withdraw 1200 `DAI` one year from now.
 
 ## What's the difference between APR and APY?
-APR (Annual Percentage Rate) is the yearly interest, minus fees. This does not include compounding effects that occur from reinvesting profits. If you were to invest 100 *DAI* with 100% APR, you would make 100 *DAI* in profit in a year time.
+APR (Annual Percentage Rate) is the yearly interest, minus fees. This does not include compounding effects that occur from reinvesting profits. If you were to invest 100 `DAI` with 100% APR, you would make 100 `DAI` in profit in a year time.
 If you however reinvest your profits regularly, you will compound your interest. This calculated over a year gives you your APY (Annual Percentage Yield). The more often you compound your interest, the greater the difference between APR and APY.
 
 ## How does APY work?

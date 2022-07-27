@@ -47,7 +47,7 @@ All token transfer logic from the user, borrow and repayment from the Vault is b
 This is a minimal working strategy that does nothing and returns tokens to the user when they close the position.
 
 ```javascript
-// SPDX-License-Identifier: BUSL-1.1
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.8.12;
 
 import { IERC20, SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Curve wars
@@ -22,10 +22,14 @@ sequenceDiagram
     Strategy->>+Convex: Stake Curve LP tokens
     User->>+Strategy: Close position
     Strategy->>+Convex: Unstake
-    Convex-->>-Strategy: Obtain Curve LP tokens
+    Convex-->>-Strategy: Obtain Curve LP tokens + reward tokens
     Strategy->>+Curve: Remove liquidity
     Curve-->>-Strategy: Get tokens back
     Strategy->>+Dex: Swap reward tokens
     Dex-->>-Strategy: Obtain tokens
     Strategy->>-User: Take eventual profit
+    User->>+Pirex: Stake obtained CVX
+    Pirex-->>-User: Redistribute pxCVX harvest across open positions
 ```
+## Implementations
+* Under development
