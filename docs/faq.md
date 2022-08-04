@@ -36,3 +36,6 @@ APY is the annual percentage yield offered from a particular investment. This ta
 Large APYs in the percentage of thousands are possible with investments that provide daily yields of 1% or more. Due to your liquidity pool rewards being constantly farmed and reinvested, the interest compounds on larger and larger amounts.
 Who can whitelist tokens?
 Adding a new supported token is a governance-based decision and needs a global evaluation on the specific token to be added. Currently, we support almost any type of ERC20 tokens, including taxed, rebasing and tokens with hodler reflection tax.
+
+# A liquidity provider wants to withdraw but all funds are deployed, what happens?
+They will need to wait that a position is closed or liquidated to unstake funds. At the same time, the more the Vault is used, the less it becomes profitable to open a position, thus freeing funds automatically.
