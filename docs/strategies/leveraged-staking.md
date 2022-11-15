@@ -31,6 +31,6 @@ If the price per share increases less than the applied interest rate, the user m
 If the interest accrued go above some critical level, the position will be liquidated.
 
 ## Implementations
-Currently the following protocols support a leveraged staking strategy:
+Currently the following protocols support a leveraged staking service:
 * Yearn (*automated investment vaults*) - [yearn.finance](https://yearn.finance)
 * Euler (*overcollateralised lending protocol*) - [euler.finance](https://euler.finance)

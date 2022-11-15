@@ -9,10 +9,10 @@ How we manage a thriving community
 
 ## DAO
 
-Ithil will progressively become a DAO - decentralised autonomous organisation. Core decisions will be taken by token holders, collectively referred as *governance*, with a thriving community of traders, LPs as well as people who put in work for the advancement of the protocol itself. As a reward, these contributors will be paid in governance tokens taken from Ithil's treasury. We foresee onboard designers, developers, financial experts, traders and marketers to work on several different side-projects and spin-offs like adding new strategies. Thanks to the community, the protocol will constantly enrich with new strategies by using community inputs as a way to democratise and distribute the development and progress of Ithil itself.
+Ithil will progressively become a DAO - decentralised autonomous organisation. Core decisions will be taken by token holders, collectively referred as *governance*, with a thriving community of traders, LPs as well as people who put in work for the advancement of the protocol itself. As a reward, these contributors will be paid in governance tokens taken from Ithil's treasury. We foresee onboard designers, developers, financial experts, traders and marketers to work on several different side-projects and spin-offs like adding new services. Thanks to the community, the protocol will constantly enrich with new services by using community inputs as a way to democratise and distribute the development and progress of Ithil itself.
 A non-exhaustive list of possible governance-based decisions is:
-- Listing or de-listing of a token or a strategy.
-- Assess the risk factor of a particular token within a strategy.
+- Listing or de-listing of a token or a service.
+- Assess the risk factor of a particular token within a service.
 - Boost or damp one stablecoin's APY using the treasury's liquidity.
 - Initiate and manage liquidity mining activities.
 Each time, an ITHIL token holder can stake his or her tokens and participate in the voting, proportionately to the number of tokens owned and staked.

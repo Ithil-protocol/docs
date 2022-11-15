@@ -7,11 +7,11 @@ Enabling traders to go long or short on any token pair
 
 ---
 
-Margin trading is the simplest form of a strategy, in which the investment logic is exchanging one token for another one on an external exchange platform.
+Margin trading is the simplest form of a service, in which the investment logic is exchanging one token for another one on an external exchange platform.
 
 ## How it works
 Margin trading is a way of trading assets using funds provided by a third party lender. Compared to regular trading where traders use their own assets, margin accounts allow to access greater sums of capital, so that they can leverage their positions increasing market exposure. Essentially, margin trading amplifies trading results so that traders can get bigger profits on successful trades.
-It is the first and foremost strategy of Ithil and the best way to get into investing in a simple way.
+It is the first and foremost service of Ithil and the best way to get into investing in a simple way.
 
 ```mermaid
 sequenceDiagram
@@ -25,7 +25,7 @@ sequenceDiagram
     Strategy->>-User: Take eventual profit
 ```
 
-The strategy's quoter will keep track of the exchange rate of a Token A with respect to a Token B. When the position is closed, the Token B is exchanged to obtain back Token A: the quantity of Token A obtained will determine if the investment has been profitable or not.
+The service's quoter will keep track of the exchange rate of a Token A with respect to a Token B. When the position is closed, the Token B is exchanged to obtain back Token A: the quantity of Token A obtained will determine if the investment has been profitable or not.
 
 ### Examples
 Let us make a numerical example of margin trading using DAI and WETH. 
@@ -50,6 +50,6 @@ The risk factor of r for a given token pair, means that for a position with that
 Such number is dependant on the specific token: a more volatile token will have a higher risk factor. Then the actual risk factor of the pair, which is applied for liquidation, will be some sort of average (arithmetic, geometric, p-means...) of the two risk factors. The logic behind is that, the higher the token volatility, the more likely the value of the entitlement will fall below the threshold defined by the risk factor, and we do not want that a more likely event will trigger a liquidation (otherwise, too many positions will be liquidable, which we want to avoid).
 
 ## Implementations
-Currently the following protocols support a leveraged staking strategy:
+Currently the following protocols support a leveraged staking service:
 * Kyber (*on-chain dex aggregator*) - [kyber.network](https://kyber.network/)
 * Uniswap (*the most famous dex on Ethereum*) - [uniswap.org](https://uniswap.org/)

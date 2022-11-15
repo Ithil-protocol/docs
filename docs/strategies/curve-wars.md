@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 
 # Curve wars
-Get exposure to the most popular battleground of Defi
+Get exposure to the most popular battleground of DeFi
 
 ---
 
