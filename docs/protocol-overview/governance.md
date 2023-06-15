@@ -9,8 +9,9 @@ How we manage a thriving community
 
 ## DAO
 
-Ithil will progressively become a DAO - decentralised autonomous organisation. Core decisions will be taken by token holders, collectively referred as *governance*, with a thriving community of traders, LPs as well as people who put in work for the advancement of the protocol itself. As a reward, these contributors will be paid in governance tokens taken from Ithil's treasury. We foresee onboard designers, developers, financial experts, traders and marketers to work on several different side-projects and spin-offs like adding new services. Thanks to the community, the protocol will constantly enrich with new services by using community inputs as a way to democratise and distribute the development and progress of Ithil itself.
-A non-exhaustive list of possible governance-based decisions is:
+Ithil will gradually evolve into a DAO (decentralised autonomous organisation). Token holders, collectively known as *governance*, will make key choices, with a flourishing community of users, LPs, and those who want to improve the protocol itself. These contributors will be compensated with governance tokens from Ithil's treasury. We plan to attract designers, developers, finance experts, traders and marketers to work on a variety of side projects and spin-offs, such as adding additional services. The protocol will be regularly expanded with additional services thanks to the community, as a way to democratise and distribute Ithil's development and progress.
+
+A non-exhaustive list of potential governance-based decisions is as follows:
 - Listing or de-listing of a token or a service.
 - Assess the risk factor of a particular token within a service.
 - Boost or damp one stablecoin's APY using the treasury's liquidity.
@@ -27,21 +28,7 @@ Each time, the DAO will propose and let all ITHIL holders decide about Ithil's r
 
 ## The $ITHIL token
 
-Governance tokens ITHIL are vital for Ithil's growth and sustainability. Ithil's governance token holders participate in governance decisions, perform liquidations and earn from them and get rewards in the form of an ever-increasing backing system coming from all these activities.
-
-### Liquidations
-
-When Ithil tokens are staked in the liquidation contract, the staker can perform liquidation and earn in a way described in the liquidation section. The amount to be liquidated in a single call increases with the amount of ITHIL staked. As the liquidated amount increases, the ITHIL staked are gradually "unblocked" until all ITHIL can be unstaked from the liquidation contract, together with the earnings from the liquidation activity.
-
-### Rewards
-
-ITHIL is backed in a specific backing contract similar to Ithil's vault. The price per share calculated by the contract is so that every circulating (i.e. outside the backing contract) ITHIL can be redeemed at any moment at that price, thus assuring the rewards accumulated by ITHIL holders are distributed. Moreover, redeeming ITHIL on the backing contract does not change the price, as it can be seen by a direct calculation.
-
-![Backing](/img/token/backing.png)
-
-The stablecoins inside the backing contract can come from various sources, such as
-- Excess insurance reserve above the optimal ratio.
-- Direct ITHIL exchange on the backing contract.
-- Profits from separate treasury's investments.
-
-The key takeaway is the fact that *there is no way to extract stablecoins from the backing contract, except redeeming ITHIL*. In this way, the backing price of ITHIL can never decrease, while there are various ways in which it can increase. A ITHIL holder will then see the backing price of ITHIL always go up in time, a system which strongly encourages to commit to the community for a long time.
+The $ITHIL token is a utility token that is vital for the protocol.
+It can be freely exchanged on popular dexes or staked on Ithil to earn a share of the protocol revenue.
+The tokens can be locked for a certain period of time, the longer the user locks their tokens for, the share of the protocol revenue they will be entitled to; fees are collected from all Vaults and paid in WETH.
+Token lockers will receive $veITHIL, a non transferrable token with governance power that allows them to vote on the protocol's future. At the same time, iToken holders (liquidity providers in the Vaults) have veto rights over governance decisions: in this way, a system of checks and balances is created, in which the protocol's future is decided by the community of users and liquidity providers.

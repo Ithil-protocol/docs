@@ -6,9 +6,9 @@ sidebar_position: 1
 
 ---
 
-Ithil is the financial interoperability layer connecting the whole #web3 space and offering novel on-chain services like:
+Ithil is the financial interoperability layer connecting the whole web3 space and offering novel on-chain services like:
 - capital-boosted DeFi services
 - NFT renting to access gated communities
 - mortgages on metaverse lands and (soon) tokenised assets
 
-![Backing](/img/core/cover.png)
+![Cover](/img/core/cover.png)

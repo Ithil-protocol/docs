@@ -7,10 +7,9 @@ Access the web3 space with more capital than the one at your disposal
 
 ---
 
-With Ithil, anyone can enjoy the web3 space thanks to its financial services; the seamless workflow allows the user to enter into any service with few clicks, letting Ithil deal with all the complex procedures necessary to implement it.
-A *true* capital boost is made possible by an internal system of uncollateralised loans, in which the funds are borrowed from Ithil's liquidity vault to be invested and the result of the particular service is *locked* in the service contract.
-In order for a user to be able to perform, there must be some *margin* posted into the service smart contract; this is necessary to cover for potential losses the vault could incur in the case of an unfavorable market movement.
-
+Thanks to Ithil's financial services, anyone can fully engage and experience the web3 space; the seamless workflow allows the user to enter into any service with a few clicks, letting Ithil handle all the intricate procedures required to do it.
+An internal system of undercollateralised loans allows for a *true* capital boost, in which funds are borrowed from Ithil's liquidity vault to be invested, and the outcome of the specific service is *locked* in the service contract.
+In order for a user to access a service, a *margin* must be posted into the service smart contract; this is required to cover potential losses the vault may incur in the event of an unfavourable market movement.
 
 ## Take Loan
 
@@ -26,7 +25,7 @@ graph TD
     A[User] -->|Add margin| B{Is amount > margin?}
     B -->|Yes| C(Take a loan<br> from the Vault)
     C --> D(Invest)
-    B -->|No| D[Strategy]
+    B -->|No| D[Service]
     D --> E(Invest)
 ```
 

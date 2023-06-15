@@ -12,18 +12,18 @@ Aura finance, on the other hand, is a protocol that maximises Balancer rewards b
 
 ```mermaid
 sequenceDiagram
-    User->>+Strategy: Open position
-    Strategy->>+Balancer: Add liquidity
-    Balancer-->>-Strategy: Obtain LP tokens
-    Strategy->>+Aura: Stake Balancer LP tokens
-    User->>+Strategy: Close position
-    Strategy->>+Aura: Unstake
-    Aura-->>-Strategy: Obtain Balancer LP tokens + rewards
-    Strategy->>+Balancer: Remove liquidity
-    Balancer-->>-Strategy: Get tokens back
-    Strategy->>+Dex: Swap reward tokens
-    Dex-->>-Strategy: Obtain tokens
-    Strategy->>-User: Take eventual profit
+    User->>+Service: Open position
+    Service->>+Balancer: Add liquidity
+    Balancer-->>-Service: Obtain LP tokens
+    Service->>+Aura: Stake Balancer LP tokens
+    User->>+Service: Close position
+    Service->>+Aura: Unstake
+    Aura-->>-Service: Obtain Balancer LP tokens + rewards
+    Service->>+Balancer: Remove liquidity
+    Balancer-->>-Service: Get tokens back
+    Service->>+Dex: Swap reward tokens
+    Dex-->>-Service: Obtain tokens
+    Service->>-User: Take eventual profit
 ```
 ## Implementations
-* Under development
+It is required for the user to enter the pool using proportional token amounts, so Ithil enforces that on a contract level. The user can choose to enter the pool with a single token, but the service will automatically convert it to the other token using the Balancer pool weights.

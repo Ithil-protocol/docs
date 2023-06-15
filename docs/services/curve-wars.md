@@ -16,20 +16,17 @@ Ithil offers users the opportunity to profit from this ecosystem without diving 
 
 ```mermaid
 sequenceDiagram
-    User->>+Strategy: Open position
-    Strategy->>+Curve: Add liquidity
-    Curve-->>-Strategy: Obtain LP tokens
-    Strategy->>+Convex: Stake Curve LP tokens
-    User->>+Strategy: Close position
-    Strategy->>+Convex: Unstake
-    Convex-->>-Strategy: Obtain Curve LP tokens + reward tokens
-    Strategy->>+Curve: Remove liquidity
-    Curve-->>-Strategy: Get tokens back
-    Strategy->>+Dex: Swap reward tokens
-    Dex-->>-Strategy: Obtain tokens
-    Strategy->>-User: Take eventual profit
-    User->>+Pirex: Stake obtained CVX
-    Pirex-->>-User: Redistribute pxCVX harvest across open positions
+    User->>+Service: Open position
+    Service->>+Curve: Add liquidity
+    Curve-->>-Service: Obtain LP tokens
+    Service->>+Convex: Stake Curve LP tokens
+    User->>+Service: Close position
+    Service->>+Convex: Unstake
+    Convex-->>-Service: Obtain Curve LP tokens + reward tokens
+    Service->>+Curve: Remove liquidity
+    Curve-->>-Service: Get tokens back
+    Service->>+Dex: Swap reward tokens
+    Dex-->>-Service: Obtain tokens
+    Service->>-User: Take eventual profit
 ```
-## Implementations
-* Under development
+

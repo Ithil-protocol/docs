@@ -11,7 +11,7 @@ The services which can be implemented are in principle very general: Ithil's DAO
 
 ```mermaid
 graph TD
-    A(New Strategy) --> C{DAO Vote}
+    A(New Service) --> C{DAO Vote}
     C -->|Yes| D[Whitelisted]
     C -->|No| E[Discarded]
 ```
