@@ -66,14 +66,19 @@ The typical ERC4626 vulnerability related to an empty vault is prevented by forc
 
 Let's make an example:
 
-*attacker's first deposit = a*
-*donation = d*
-*victim's deposited amount = v*
+$$
+\textit{attacker's first deposit} = a
+\textit{donation} = d
+\textit{victim's deposited amount} = v
+$$
 
 **t0**
-attacker's first supply = a
-totalSupply after attacker's deposit = 1 + a 
-totalAssets before victim's deposit = d + a + 1
+
+$$
+\textit{attacker's first supply} = a
+\textit{totalSupply after attacker's deposit} = 1 + a 
+\textit{totalAssets before victim's deposit} = d + a + 1
+$$
 
 **t1**
 $$

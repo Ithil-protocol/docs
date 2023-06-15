@@ -19,7 +19,6 @@ A non-exhaustive list of potential governance-based decisions is as follows:
 Each time, an ITHIL token holder can stake his or her tokens and participate in the voting, proportionately to the number of tokens owned and staked.
 
 ### The treasury
-
 All Ithil's decisions and community building cannot take place without a solid treasury. Ithil's treasury is entirely made of ITHIL tokens, which will be used for various important tasks such as the following.
 - Pay for community mining and marketing activities.
 - Allowing APY boosts for particular vaults.
@@ -28,7 +27,18 @@ Each time, the DAO will propose and let all ITHIL holders decide about Ithil's r
 
 ## The $ITHIL token
 
-The $ITHIL token is a utility token that is vital for the protocol.
-It can be freely exchanged on popular dexes or staked on Ithil to earn a share of the protocol revenue.
-The tokens can be locked for a certain period of time, the longer the user locks their tokens for, the share of the protocol revenue they will be entitled to; fees are collected from all Vaults and paid in WETH.
-Token lockers will receive $veITHIL, a non transferrable token with governance power that allows them to vote on the protocol's future. At the same time, iToken holders (liquidity providers in the Vaults) have veto rights over governance decisions: in this way, a system of checks and balances is created, in which the protocol's future is decided by the community of users and liquidity providers.
+The $ITHIL token plays a crucial role within the Ithil protocol, providing users with various benefits and actively involving them in the governance of the ecosystem. Let's explore the features and governance aspects of the $ITHIL token in more detail:
+
+### Utility and Benefits
+The $ITHIL token is a utility token that serves as a key component of the Ithil protocol. Token holders can freely exchange $ITHIL on popular decentralized exchanges (DEXes) or stake it within the Ithil ecosystem to unlock additional benefits.
+
+### Staking and Revenue Sharing
+By staking $ITHIL tokens, users can participate in the revenue-sharing mechanism of the protocol. Stakers receive a portion of the protocol's fees, which are collected from all Vaults within the Ithil ecosystem. These fees contribute to a revenue pool, and stakers are rewarded in WETH (Wrapped Ether). The longer users lock their $ITHIL tokens, the greater their entitlement to the protocol's revenue becomes, creating an incentive for long-term engagement.
+
+### Governance Power
+Token lockers who stake their $ITHIL tokens receive $veITHIL, a non-transferable token that carries governance power within the Ithil ecosystem. With $veITHIL, token holders gain the ability to actively participate in the decision-making process of the protocol. This includes voting on important matters such as protocol upgrades, parameter adjustments, and the introduction of new features. The governance power of $veITHIL holders empowers them to shape the future direction of Ithil in a decentralized and community-driven manner.
+
+### Checks and Balances
+To ensure a fair and balanced governance system, Ithil incorporates a system of checks and balances. While $veITHIL holders have the authority to vote on governance proposals, iToken holders, who are the liquidity providers within the Vaults, possess veto powers. This means that governance decisions proposed by $veITHIL holders require the support of iToken holders to be implemented. This mechanism ensures that the interests of both token lockers and liquidity providers are considered, creating a collaborative and resilient governance structure.
+
+Through the combination of staking, revenue sharing, and governance power, the $ITHIL token fosters active participation and community-driven decision-making within the Ithil protocol. This democratic approach enables users to have a say in shaping the future of the ecosystem and ensures a secure and decentralized financial platform.
