@@ -76,17 +76,30 @@ totalSupply after attacker's deposit = 1 + a
 totalAssets before victim's deposit = d + a + 1
 
 **t1**
-*victim's supply after deposit = Floor[v * (1+a) / (d + a + 1)] = v - Floor[(d * v)/(1 + a + d)] := S*
-*attacker's withdraw after deposit = Floor[a * (v + d + a + 1) / (1 + a + S)] := W*
-*claim: W <= a + d*
+$$
+\textit{victim's supply after deposit}: Floor[\frac{v (1+a)}{d + a + 1}] = v - Floor[\frac{d * v}{1 + a + d}] := S
+$$
+
+$$
+\textit{attacker's withdraw after deposit}: Floor[\frac{a (v + d + a + 1)}{1 + a + S}] := W
+$$
+
+$$
+\textit{claim}: W <= a + d
+$$
+
 > this means the attacker can withdraw at most what he has donated + what he has deposited at the beginning
 
 Why
 let's rewrite the function as:
-*-d (1 + v) + (a + d) Floor[(d v)/(1 + a + d)]*
+$$
+-d (1 + v) + (a + d) Floor[\frac{d v}{1 + a + d}]
+$$
 remove the *Floor* function and the always positive denominator as *Floor[(d v)/(1 + a + d)] <= v*
 you get
-*-d (1 + v) + (a + d) Floor[(d v)/(1 + a + d)] <= -d (1 + v) + (a + d) * [(d v)/(1 + a + d)] = -((d (1 + a + d + v))/(1 + a + d)) <= -d <= 0*
+$$
+-d (1 + v) + (a + d) Floor[\frac{d v}{1 + a + d}] <= -d (1 + v) + (a + d) * [\frac{d v}{1 + a + d}] = -\frac{d (1 + a + d + v)}{1 + a + d} <= -d <= 0
+$$
 Thus the attacker extractable value is always negative, meaning that the attacker can't extract any value from the vault.
 
 ## APY Boost

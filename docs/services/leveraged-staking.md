@@ -23,7 +23,7 @@ sequenceDiagram
 Let us make a numerical example using DAI and Yearn.
 
 - A user posts a margin of 1000 USDT to the Ithil protocol and decides to stake their USDT on Aave V3 as a lender, earning a passive APY.
-- USer borrows 9000 USDT (assuming a 9x leverage) from Ithil USDT Vault and transfers the total of 10,000 USDT to the user's Aave V3 lending position.
+- User borrows 9000 USDT (assuming a 9x leverage) from Ithil USDT Vault and transfers the total of 10,000 USDT to the user's Aave V3 lending position.
 - Assuming the user earns a monthly APY of 5% as a lender on Aave V3, their 10,000 USDT would generate 500 USDT in interest after one month.
 - After one month, the user decides to close their position. They receive the initial 10,000 USDT plus the earned interest of 500 USDT, resulting in a total of 10,500 USDT.
 - The user would then need to repay the Ithil protocol the borrowed 9000 USDT plus the interest accrued during the month. Assuming a 3% monthly interest rate applied by Ithil's vault, the repayment amount would be 9270 USDT.
